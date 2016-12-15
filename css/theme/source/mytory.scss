@@ -1,0 +1,80 @@
+/**
+ * Black theme for reveal.js. This is the opposite of the 'white' theme.
+ *
+ * By Hakim El Hattab, http://hakim.se
+ */
+
+
+// Default mixins and settings -----------------
+@import "../template/mixins";
+@import "../template/settings";
+// ---------------------------------------------
+
+
+// Override theme settings (see ../template/settings.scss)
+$backgroundColor: #222;
+
+$mainColor: #fff;
+$headingColor: #fff;
+
+$mainFontSize: 38px;
+$mainFont: 'Apple SD Gothic Neo', 'Malgun Gothic', 'NanumBarunGothic', sans-serif;
+$headingFont: 'Apple SD Gothic Neo', 'Malgun Gothic', 'NanumBarunGothic', sans-serif;
+$headingTextShadow: none;
+$headingLetterSpacing: normal;
+$headingTextTransform: uppercase;
+$headingFontWeight: 600;
+$linkColor: #42affa;
+$linkColorHover: lighten( $linkColor, 15% );
+$selectionBackgroundColor: lighten( $linkColor, 25% );
+
+$heading1Size: 2.5em;
+$heading2Size: 1.6em;
+$heading3Size: 1.3em;
+$heading4Size: 1.0em;
+
+section.has-light-background {
+	&, h1, h2, h3, h4, h5, h6 {
+		color: #222;
+	}
+}
+
+
+// Theme template ------------------------------
+@import "../template/theme";
+// ---------------------------------------------
+
+.text-medium {
+  font-size: 2rem !important;
+  line-height: 1.3 !important;
+}
+.text-large {
+  font-size: 3rem !important;
+  line-height: 1.3 !important;
+}
+.text-xlarge {
+  font-size: 4rem !important;
+  line-height: 1.3 !important;
+}
+.text-right {
+  text-align: right;
+}
+.text-left {
+  text-align: left;
+}
+.text-outline {
+  -webkit-text-stroke: 1px black;
+  text-shadow: #000 1px 1px 2px!important;
+}
+.text-background {
+  background-color: rgba(0,0,0,0.7);
+}
+.color-black {
+  color: black!important;
+}
+.u-padding {
+  padding: .5rem!important;
+}
+.reveal pre {
+  white-space: pre-line;
+}
