@@ -25,11 +25,12 @@
 <div class="reveal">
     <div class="slides">
         <section>
+            <p class="text-left  color-muted">WSConf.Seoul 2016</p>
             <h1>
                 유지보수하기 쉬운 <br> CSS 전략
             </h1>
 
-            <p><strong>안형우</strong> (노동자 연대) </p>
+            <p class="text-right  color-muted"><strong>안형우</strong> 노동자 연대</p>
         </section>
 
         <section>
@@ -372,18 +373,14 @@ html {
             <h2>부트스트랩의 <code>.btn</code> 객체</h2>
 
             <p><img src="images/bootstrap-button-1.jpg" alt=""></p>
-<pre><code class="html"><button class="btn  btn-primary">
-    수정
-</button></code></pre>
+<pre><code class="html">&lt;button class="btn  btn-primary"></code></pre>
         </section>
 
         <section>
             <h2>부트스트랩의 <code>.btn</code> 객체</h2>
 
             <p><img src="images/bootstrap-button-2.jpg" alt=""></p>
-<pre><code class="html"><button class="btn  btn-lg  btn-primary">
-    저장
-</button></code></pre>
+<pre><code class="html">&lt;button class="btn  btn-lg  btn-primary"></code></pre>
 
         </section>
 
@@ -452,32 +449,23 @@ html {
 
 
         <section>
-            <h2>
-                <small class="color-muted">도구2.</small>
-                태그 선택자 사용 자제
-            </h2>
+            <p class="color-muted">도구2. 태그 선택자 사용 자제</p>
 
-            <pre><code class="css">ul.nav { ... }
-button.btn { ... }
-div.box { ... }</code></pre>
-            <pre><code class="html"><span class="nav"></span>
-<a class="btn" href="..."></a>
-<p class="box"></p></code></pre>
+            <h2><code><span class="fragment fade-out">ul</span>.nav</code></h2>
+            <h2><code><span class="fragment fade-out">div</span>.box</code></h2>
 
         </section>
 
 
 
         <section>
-            <h2>
-                <small class="color-muted">도구2.</small>
-                태그 선택자 사용 자제
-            </h2>
+            <p class="color-muted">도구2. 태그 선택자 사용 자제</p>
+            <h2><code>.title span</code></h2>
 
-<pre><code class="css">.title span {
-    color: #364fc7;
-    font-weight: bold;
-}</code></pre>
+<!--<pre><code class="css">.title span {-->
+    <!--color: #364fc7;-->
+    <!--font-weight: bold;-->
+<!--}</code></pre>-->
 <pre><code class="html"><header class="title">
     박근혜는
     <span>즉각</span>
@@ -492,16 +480,13 @@ div.box { ... }</code></pre>
 
 
         <section>
+            <p class="color-muted">도구2. 태그 선택자 사용 자제</p>
+            <h2><code>.color-primary</code></h2>
 
-            <h2>
-                <small class="color-muted">도구2.</small>
-                태그 선택자 사용 자제
-            </h2>
-
-<pre><code class="css">.color-primary {
-    color: #364fc7;
-}
-</code></pre>
+<!--<pre><code class="css">.color-primary {-->
+    <!--color: #364fc7;-->
+<!--}-->
+<!--</code></pre>-->
 <pre><code class="html"><header class="title">
     박근혜는
     <b class="color-primary">즉각</b>
@@ -512,81 +497,61 @@ div.box { ... }</code></pre>
 
 
         <section>
-            <h2>
-                <small class="color-muted">도구1~2.</small>
-                특정도와 태그 선택자
-            </h2>
+            <p class="color-muted">도구1~2. 특정도와 태그 선택자</p>
 
 <pre><code class="css">.btn { ... }
-.uilist { ... }
 .uilist a { ... }</code></pre>
 
 <div class="fragment">
-<pre><code class="html"><nav class="uilist">
-    <a href="#">소개</a>
-    <a class="btn" href="#">로그인</a>
-</nav></code></pre>
-
-            <ul>
-                <li>덮어쓰게 된다.</li>
-                <li>모든 <code>a</code>에 적용.</li>
-            </ul>
+<pre><code class="html">&lt;nav class="uilist">
+    &lt;a>소개&lt;/a>
+    &lt;a class="btn">로그인&lt;/a>
+&lt;/nav></code></pre>
 </div>
+            <p class="color-muted  text-small  text-right"><code>href</code> 속성은 생략했습니다.</p>
+            <aside class="notes">
+                덮어쓰게 된다, 모든 <code>a</code>에 적용된다.
+            </aside>
         </section>
 
 
         <section>
-            <h2>
-                <small class="color-muted">도구1~2.</small>
-                특정도와 태그 선택자
-            </h2>
+            <p class="color-muted">도구1~2. 특정도와 태그 선택자</p>
+
 
 <pre><code class="css">.btn { ... }
-.uilist { ... }
 .uilist-item { ... }</code></pre>
 
 <div class="fragment">
-<pre><code class="html"><nav class="uilist">
-    <a class="uilist-item" href="#">소개</a>
-    <span class="uilist-item">
-        <a class="btn" href="#">로그인</a>
-    </span>
-</nav></code></pre>
-    <p>코드는 좀 늘어도 일관성 유지.</p>
+<pre><code class="html">&lt;nav class="uilist">
+    &lt;a class="uilist-item">소개&lt;/a>
+    &lt;span class="uilist-item">
+        &lt;a class="btn">로그인&lt;/a>
+    &lt;/span>
+&lt;/nav></code></pre>
+
+    <aside class="notes">
+        <p>코드는 좀 늘어도 일관성 유지.</p>
+    </aside>
+
 </div>
         </section>
 
 
 
 <section>
-    <h2>
-        <small class="color-muted">도구3.</small>
-        재사용성을 확보하는 이름
-    </h2>
+    <p class="color-muted">도구3. 재사용성을 확보하는 이름</p>
 
-    <p>모양 기반 이름을 골라야 하는가?</p>
+    <h2><code>.blue-title</code></h2>
+    <h2><code>.text-primary</code></h2>
 
-<pre><code class="css">.big-blue-title { /* 색이 바뀌면? */ }
-.text-primary { /* 역할 기반 이름 */ }</code></pre>
-
-<pre><code class="css">.submit-button { /* 제출 안 하면? */ }
-.button-primary { /* 역할 기반 이름 */ }</code></pre>
 </section>
 
 
         <section>
-            <h2>
-                <small class="color-muted">도구3.</small>
-                재사용성을 확보하는 이름
-            </h2>
-
-            <p>위치 기반 이름은?</p>
-
-<pre><code class="css">.bottom-items { /* 가운데 쓰면? */ }
-.card { /* 위치 독립적 성격 표현 */ }</code></pre>
-
-<pre><code class="css">.index-box { /* 다른 페이지에 가면? */ }
-.panel { /* 위치 독립적 성격 표현 */ }</code></pre>
+            <p class="color-muted">도구3. 재사용성을 확보하는 이름</p>
+            <h2><code>.bottom-items</code></h2>
+            <h2><code>.card</code></h2>
 
             <aside class="notes" data-markdown>
                 특정 모양이나 위치에 기반한 이름은 일단 피하자.
@@ -600,18 +565,16 @@ div.box { ... }</code></pre>
 
 
 <section>
-    <h2>
-        <small>도구4.</small>
-        기본 모듈을 갖추자
-    </h2>
+    <p class="color-muted">도구4. 기본 모듈을 갖추자</p>
+    <h2>그리드, 헤딩, 링크, 목록, 버튼, <br>미디어, 테이블, 타이포...</h2>
 
-    <p>그리드 객체, 미디어 객체... by 니콜</p>
-<pre><code class="html"><div class="grid">
-  <div class="grid-item  u-3/12">left</div>
-  <div class="grid-item  u-6/12">center</div>
-  <div class="grid-item  u-3/12">right</div>
-</div>
-</code></pre>
+<pre><code class="html"><div class="layout">
+    <div class="layout-item  u-1/1"></div>
+    <div class="layout-item  u-1/2"></div>
+    <div class="layout-item  u-1/2"></div>
+</div></code></pre>
+
+    <p class="text-right color-muted text-small">inuitcss에서 원용했습니다.</p>
 
 </section>
 
@@ -621,15 +584,37 @@ div.box { ... }</code></pre>
         <small class="color-muted">도구5.</small>
         타이포그라피 전략을 세우자
     </h2>
-
     <ul>
         <li>기본 <strong>글꼴, 크기, 색</strong>을 태그 선택자에 지정</li>
         <li>Hx <strong>글꼴, 크기, 색</strong>을 헤딩 선택자에 지정</li>
         <li>사용할 <strong>글꼴, 크기, 색</strong> 유틸리티 클래스</li>
     </ul>
 
-    <p>컴포넌트 폰트 지정을 피하면 중복 방지에 도움</p>
+    <p>컴포넌트에서의 폰트 지정을 최소화하자.</p>
 </section>
+
+
+<section>
+    <p class="color-muted">도구5. 타이포그라피 전략을 세우자</p>
+    <h2>
+        유틸리티 클래스 활용
+    </h2>
+<pre><code class="css">/* text align */
+.u-text-right
+.u-text-center
+
+/* font size */
+.u-text-small
+.u-text-large
+
+/* font color */
+.u-color-primary
+.u-color-secondary
+.u-color-muted
+.u-color-highlight
+</code></pre>
+</section>
+
 
 
 
