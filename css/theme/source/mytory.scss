@@ -95,7 +95,8 @@ code {
   text-shadow: white 0 0 10px !important;
 }
 
-.text-background {
+.text-box {
+  padding: $mainFontSize / 2 !important;
   background-color: rgba(255, 255, 255, 0.7);
 }
 
