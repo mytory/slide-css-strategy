@@ -57,6 +57,8 @@
 #intro .main { ... }
 #intro .main h1 { ... }</code></pre>
 
+            <p class="color-gray">한 화면에 담으려고 한 줄로 썼습니다.<br>실 개발시엔 줄을 바꿉시다.</p>
+
             <aside class="notes" data-markdown>
                 이런 식의 예제를 심심찮게 볼 수 있다.
 
@@ -137,7 +139,12 @@
         </section>
 
         <section>
-            <h2><ruby>C<rt>cascade</rt></ruby>는 잘못이 없다</h2>
+            <h2>
+                <ruby>C
+                    <rt>cascade</rt>
+                </ruby>
+                는 잘못이 없다
+            </h2>
 
             <pre class="text-large"><code class="css">@import 'nomalize.css';
 html {
@@ -150,7 +157,12 @@ html {
         </section>
 
         <section>
-            <h2><ruby>C<rt>Cascade</rt></ruby>는 잘못이 없다</h2>
+            <h2>
+                <ruby>C
+                    <rt>Cascade</rt>
+                </ruby>
+                는 잘못이 없다
+            </h2>
 
             <pre class="text-large"><code class="css">input, textarea {
   font-family: inherit;
@@ -163,6 +175,7 @@ html {
 
         <section>
             <h1 class="u-margin-bottom">클래스명은 내용을 표현해야 하는가?</h1>
+
             <p>CSS의 시맨틱 ≠ 내용의 시맨틱</p>
 
             <p class="text-right">
@@ -211,9 +224,11 @@ html {
                     OOCSS
                 </h1>
 
-                <p class="text-right"><small>
-                    by 니콜 설리반, 2009
-                </small></p>
+                <p class="text-right">
+                    <small>
+                        by 니콜 설리반, 2009
+                    </small>
+                </p>
 
                 <ul>
                     <li>골격과 겉모양을 분리
@@ -227,7 +242,10 @@ html {
         </section>
 
         <section>
-            <h2><small class="color-gray">원칙1.</small> 골격과 겉모양을 분리</h2>
+            <h2>
+                <small class="color-gray">원칙1.</small>
+                골격과 겉모양을 분리
+            </h2>
 <pre class="text-medium"><code class="css">.blue-button {
     line-height: 20px;
     background-color: blue;
@@ -242,7 +260,10 @@ html {
         </section>
 
         <section>
-            <h2><small class="color-gray">원칙1.</small> 골격과 겉모양을 분리</h2>
+            <h2>
+                <small class="color-gray">원칙1.</small>
+                골격과 겉모양을 분리
+            </h2>
 <pre class="text-medium"><code class="css">.button {
     line-height: 20px;
     ...
@@ -256,6 +277,37 @@ html {
 }
 </code></pre>
         </section>
+
+        <section>
+            <h2>
+                <small class="color-gray">원칙2.</small>
+                컨테이너와 내용물을 분리
+            </h2>
+
+<pre class="css"><code>#article h2 { font-size: 24px }
+#article h3 { font-size: 20px }
+#sidebar h2 { font-size: 20px }
+#sidebar h3 { font-size: 16px }
+#footer h2 { font-size: 16px }
+#footer h3 { font-size: 14px }</code></pre>
+        </section>
+
+        <section>
+            <h2>
+                <small class="color-gray">원칙2.</small>
+                컨테이너와 내용물을 분리
+            </h2>
+
+<pre class="css"><code>.u-h2 { font-size: 24px }
+.u-h3 { font-size: 20px }
+.u-h4 { font-size: 16px }
+.u-h5 { font-size: 14px }
+</code></pre>
+
+<pre><code class="html"><h2 class="u-h3">...</h2></code></pre>
+        </section>
+
+
     </div>
 </div>
 

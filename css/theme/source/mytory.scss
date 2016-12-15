@@ -116,3 +116,8 @@ rt {
 .u-margin-bottom-xlarge {
   margin-bottom: $mainFontSize * 2 !important;
 }
+
+// override
+.reveal pre {
+  font-size: $mainFontSize;
+}
