@@ -36,10 +36,10 @@
             <h1>Best Practice?</h1>
 
             <dl>
+                <dt>계층적 선택자</dt>
+                <dd>CSS의 <strong>C</strong>ascade</dd>
                 <dt>권장 시맨틱</dt>
                 <dd>콘텐츠의 본질을 반영하는 클래스명</dd>
-                <dt>계층적 선택자 남용</dt>
-                <dd>CSS의 <strong>C</strong>ascade</dd>
             </dl>
 
             <aside class="notes" data-markdown>
@@ -50,11 +50,12 @@
         </section>
 
         <section>
+            <h2>계층적 선택자</h2>
             <pre class="text-large"><code class="css">.issue { ... }
-                .issue h2 { ... }
-                #intro h1 { ... }
-                #intro .main { ... }
-                #intro .main h1 { ... }</code></pre>
+.issue h2 { ... }
+#intro h1 { ... }
+#intro .main { ... }
+#intro .main h1 { ... }</code></pre>
 
             <aside class="notes" data-markdown>
                 이런 식의 예제를 심심찮게 볼 수 있다.
@@ -78,13 +79,12 @@
                 </p>
             </blockquote>
             <pre class="text-medium"><code class="css">.issue h2 { ... }
-                .issue ul { ... }
-                .issue ul li a { ... }
-                .issue ul li a.more { ... }
-                .news h2 { ... }
-                .latest h2 { ... }
-                .related h2 { ... }
-            </code></pre>
+.issue ul { ... }
+.issue ul li a { ... }
+.issue ul li a.more { ... }
+.news h2 { ... }
+.latest h2 { ... }
+.related h2 { ... }</code></pre>
 
             <aside class="notes" data-markdown>
                 두 가지 권장사항의 개연성 있는 결과. 흔히 마주친다.
@@ -92,40 +92,41 @@
         </section>
 
         <section data-background="images/sniper.jpg">
-            <h1 class="text-outline  u-margin-bottom-xlarge">저격형 선택자</h1>
+            <h2 class="text-outline  u-margin-bottom-xlarge">저격형 선택자</h2>
 
             <pre class="text-medium"><code class="css">.issue h2 { ... }
-                .issue ul { ... }
-                .issue ul li a { ... }
-                .issue ul li a.more { ... }
-                .news h2 { ... }
-                .news ul { ... }
-                .news ul li a { ... }
-                .news ul li a.more { ... }
-                .latest h2 { ... }
-                .latest ul { ... }
-                .latest ul li a { ... }
-                .latest ul li a.more { ... }
-                .related h2 { ... }
-                .related ul { ... }
-                .related ul li a { ... }
-                .related ul li a.more { ... }
-                #sidebar .issue h2 { ... }
-                #sidebar .news h2 { ... }
-                #sidebar .issue ul { ... }
-                #sidebar .latest h2 { ... }
-                #sidebar .related h2 { ... }
-                #article-footer .issue h2 { ... }
-                #article-footer .news h2 { ... }
-                #article-footer .issue ul { ... }
-                #article-footer .issue ul li a { ... }
-                #article-footer .issue ul li a.more { ... }
-                #article-footer .latest h2 { ... }
-                #article-footer .related h2 { ... }
-            </code></pre>
+.issue ul { ... }
+.issue ul li a { ... }
+.issue ul li a.more { ... }
+.news h2 { ... }
+.news ul { ... }
+.news ul li a { ... }
+.news ul li a.more { ... }
+.latest h2 { ... }
+.latest ul { ... }
+.latest ul li a { ... }
+.latest ul li a.more { ... }
+.related h2 { ... }
+.related ul { ... }
+.related ul li a { ... }
+.related ul li a.more { ... }
+#sidebar .issue h2 { ... }
+#sidebar .news h2 { ... }
+#sidebar .issue ul { ... }
+#sidebar .latest h2 { ... }
+#sidebar .related h2 { ... }
+#article-footer .issue h2 { ... }
+#article-footer .news h2 { ... }
+#article-footer .issue ul { ... }
+#article-footer .issue ul li a { ... }
+#article-footer .issue ul li a.more { ... }
+#article-footer .latest h2 { ... }
+#article-footer .related h2 { ... }</code></pre>
 
             <aside class="notes" data-markdown>
-                저격형 선택자. 저격은 필요할 때 써야 효과적.
+                저격형 선택자. 엄청나게 비효율적이다.
+
+                문서의 구조를 담으려는 노력도 보인다.
 
                 1. 비슷한 CSS 속성이 반복
                 2. 새 페이지와 요소를 추가할 때마다 CSS를 새로 작성하거나 편집.
@@ -136,7 +137,33 @@
         </section>
 
         <section>
-            <h1 class="u-margin-bottom">내용의 시맨틱<br>≠<br>CSS의 시맨틱</h1>
+            <h2><ruby>C<rt>cascade</rt></ruby>는 잘못이 없다</h2>
+
+            <pre class="text-large"><code class="css">@import 'nomalize.css';
+html {
+  font-size: 100%;
+  font-family: 'Apple SD Gothic Neo', 'Malgun Gothic', 'KopubDotum', sans-serif;
+  ...
+}
+</code></pre>
+
+        </section>
+
+        <section>
+            <h2><ruby>C<rt>Cascade</rt></ruby>는 잘못이 없다</h2>
+
+            <pre class="text-large"><code class="css">input, textarea {
+  font-family: inherit;
+  line-height: inherit;
+  color: inherit;
+}
+            </code></pre>
+
+        </section>
+
+        <section>
+            <h1 class="u-margin-bottom">클래스명은 내용을 표현해야 하는가?</h1>
+            <p>CSS의 시맨틱 ≠ 내용의 시맨틱</p>
 
             <p class="text-right">
                 <a href="http://mytory.net/2016/12/02/about-html-semantics-front-end-architecture.html">by 니콜라스 갤러거</a>
@@ -151,7 +178,7 @@
         </section>
 
         <section>
-            <dl class="text-xlarge">
+            <dl class="text-large">
                 <dt class="color-highlight">내용 시맨틱</dt>
                 <dd class="u-margin-bottom">검색엔진, 사람이 참조 <br>&rarr; HTML, Microdata</dd>
                 <dt class="color-highlight">개발 시맨틱</dt>
@@ -166,18 +193,37 @@
 
         <section>
             <pre class="text-large"><code class="html">&lt;h2>뉴스&lt;/h2>
-                &lt;ul class="news">
-                    ...
-            </code></pre>
+&lt;ul class="news">
+  ...</code></pre>
             <pre class="text-large"><code class="html">&lt;h2>뉴스&lt;/h2>
-                &lt;ul class="simple-list">
-                    ...
-            </code></pre>
+&lt;ul class="simple-list">
+  ...</code></pre>
 
             <aside class="notes" data-markdown>
                 1. `.news`: 뉴스에만 사용할 수 있고, 정보는 내용에서 도출된다.
                 2. `.simple-list`: 비슷한 형태라면 어디서나 재사용할 수 있고, 어떤 목적으로 사용하는 클래스인지 개발자에게 정보를 준다.
             </aside>
+        </section>
+
+        <section data-background-image="images/kind-of-lego-block.jpg">
+            <div class="text-background  u-padding">
+                <h1>
+                    OOCSS
+                </h1>
+
+                <p class="text-right"><small>
+                    <a href="">by 니콜 설리반, 2009</a>
+                </small></p>
+
+                <ul>
+                    <li>골격과 겉모습을 분리
+                        <small>Separate Structure and Skin</small>
+                    </li>
+                    <li>컨테이너와 내용물을 분리
+                        <small>Separate Container and Content</small>
+                    </li>
+                </ul>
+            </div>
         </section>
     </div>
 </div>

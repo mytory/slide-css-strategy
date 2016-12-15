@@ -53,6 +53,11 @@ body {
   word-break: keep-all;
 }
 
+rt {
+  color: $oc-gray-6;
+  text-transform: none;
+}
+
 // typo
 .text-medium {
   font-size: $mainFontSize !important;
@@ -106,9 +111,4 @@ body {
 
 .u-margin-bottom-xlarge {
   margin-bottom: $mainFontSize * 2 !important;
-}
-
-// override
-.reveal pre {
-  white-space: pre-line;
 }
