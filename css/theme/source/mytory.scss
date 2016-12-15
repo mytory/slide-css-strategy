@@ -58,7 +58,15 @@ rt {
   text-transform: none;
 }
 
+code {
+  text-transform: none;
+}
+
 // typo
+.text-small {
+  font-size: $mainFontSize / 2 !important;
+}
+
 .text-medium {
   font-size: $mainFontSize !important;
   line-height: 1.3 !important;
@@ -97,7 +105,7 @@ rt {
 }
 
 .color-gray {
-  color: $oc-gray-6
+  color: $oc-gray-6 !important;
 }
 
 // margin, padding
@@ -121,3 +129,4 @@ rt {
 .reveal pre {
   font-size: $mainFontSize;
 }
+
