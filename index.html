@@ -31,25 +31,51 @@
 
             <p><strong>안형우</strong> (노동자 연대) </p>
         </section>
+
         <section>
-            <h2>우리가 CSS를 배운 방식</h2>
+            <h1>Best Practice?</h1>
+
+            <dl>
+                <dt>권장 시맨틱</dt>
+                <dd>콘텐츠의 본질을 반영하는 클래스명</dd>
+                <dt>계층적 선택자 남용</dt>
+                <dd>CSS의 <strong>C</strong>ascade</dd>
+            </dl>
+
+            <aside class="notes" data-markdown>
+                시맨틱은 CSS 스펙에 나옴
+
+                계층적이라는 건 CSS의 본질 중 하나. 남용되는 사례다.
+            </aside>
+        </section>
+
+        <section>
             <pre class="text-large"><code class="css">.issue { ... }
                 .issue h2 { ... }
                 #intro h1 { ... }
-                #intro .article h1 { ... }</code></pre>
+                #intro .main { ... }
+                #intro .main h1 { ... }</code></pre>
 
             <aside class="notes" data-markdown>
-                이런 방식은 두 가지 권장 사항에 기반.
+                이런 식의 예제를 심심찮게 볼 수 있다.
 
-                1. 시맨틱 - 콘텐츠의 본질을 반영하는 이름을 사용하라.
-                2. 계층적 선택자 - CSS의 C에 해당.
+                학습으로선 괜찮다.
             </aside>
         </section>
         <section>
-            <h2 style="margin-bottom: -3rem;">권장사항이 우리 목을 조르고 있다</h2>
+            <h2>권장사항이 우리 목을 조르고 있다</h2>
 
             <blockquote>
-                <p>Our CSS best practice are killing us.</p>
+                <p>
+                    Our CSS best practice are killing us.
+                    <br>
+                    <small>
+                        <a target="_blank" rel="noopener"
+                           href="http://www.stubbornella.org/content/2011/04/28/our-best-practices-are-killing-us/">
+                            by Nicole Sullivan
+                        </a>
+                    </small>
+                </p>
             </blockquote>
             <pre class="text-medium"><code class="css">.issue h2 { ... }
                 .issue ul { ... }
@@ -59,58 +85,99 @@
                 .latest h2 { ... }
                 .related h2 { ... }
             </code></pre>
+
+            <aside class="notes" data-markdown>
+                두 가지 권장사항의 개연성 있는 결과. 흔히 마주친다.
+            </aside>
         </section>
 
         <section data-background="images/sniper.jpg">
-            <h2 class="text-outline">저격형 선택자</h2>
-            <div class="fragment">
-                <pre class="text-medium"><code class="css">.issue h2 { ... }
-                    .issue ul { ... }
-                    .issue ul li a { ... }
-                    .issue ul li a.more { ... }
-                    .news h2 { ... }
-                    .news ul { ... }
-                    .news ul li a { ... }
-                    .news ul li a.more { ... }
-                    .latest h2 { ... }
-                    .latest ul { ... }
-                    .latest ul li a { ... }
-                    .latest ul li a.more { ... }
-                    .related h2 { ... }
-                    .related ul { ... }
-                    .related ul li a { ... }
-                    .related ul li a.more { ... }
-                    #sidebar .issue h2 { ... }
-                    #sidebar .news h2 { ... }
-                    #sidebar .issue ul { ... }
-                    #sidebar .latest h2 { ... }
-                    #sidebar .related h2 { ... }
-                    #article-footer .issue h2 { ... }
-                    #article-footer .news h2 { ... }
-                    #article-footer .issue ul { ... }
-                    #article-footer .issue ul li a { ... }
-                    #article-footer .issue ul li a.more { ... }
-                    #article-footer .latest h2 { ... }
-                    #article-footer .related h2 { ... }
-                </code></pre>
-            </div>
+            <h1 class="text-outline  u-margin-bottom-xlarge">저격형 선택자</h1>
+
+            <pre class="text-medium"><code class="css">.issue h2 { ... }
+                .issue ul { ... }
+                .issue ul li a { ... }
+                .issue ul li a.more { ... }
+                .news h2 { ... }
+                .news ul { ... }
+                .news ul li a { ... }
+                .news ul li a.more { ... }
+                .latest h2 { ... }
+                .latest ul { ... }
+                .latest ul li a { ... }
+                .latest ul li a.more { ... }
+                .related h2 { ... }
+                .related ul { ... }
+                .related ul li a { ... }
+                .related ul li a.more { ... }
+                #sidebar .issue h2 { ... }
+                #sidebar .news h2 { ... }
+                #sidebar .issue ul { ... }
+                #sidebar .latest h2 { ... }
+                #sidebar .related h2 { ... }
+                #article-footer .issue h2 { ... }
+                #article-footer .news h2 { ... }
+                #article-footer .issue ul { ... }
+                #article-footer .issue ul li a { ... }
+                #article-footer .issue ul li a.more { ... }
+                #article-footer .latest h2 { ... }
+                #article-footer .related h2 { ... }
+            </code></pre>
+
+            <aside class="notes" data-markdown>
+                저격형 선택자. 저격은 필요할 때 써야 효과적.
+
+                1. 비슷한 CSS 속성이 반복
+                2. 새 페이지와 요소를 추가할 때마다 CSS를 새로 작성하거나 편집.
+                3. 선택자 점수 경쟁
+                4. CSS 용량 증가 -> 성능에 악영향
+                5. 불필요한 코드 삭제에 번거롭다
+            </aside>
         </section>
 
         <section>
+            <h1 class="u-margin-bottom">내용의 시맨틱<br>≠<br>CSS의 시맨틱</h1>
 
-        </section>
+            <p class="text-right">
+                <a href="http://mytory.net/2016/12/02/about-html-semantics-front-end-architecture.html">by 니콜라스 갤러거</a>
+            </p>
 
-        <section>
-            <h1>내용의 시맨틱<br>≠<br>CSS의 시맨틱</h1>
+            <aside class="notes" data-markdown>
+                그런데, 클래스명이 왜 꼭 내용에서 도출돼야 하는가?
+
+                1. 검색엔진은 클래스명을 참조하지 않는다. (예외: 마이크로포맷)
+                2. 사람을 위해서? 내용을 반복할 뿐이다.
+            </aside>
         </section>
 
         <section>
             <dl class="text-xlarge">
-                <dt>HTML, Microdata:</dt>
-                <dd>검색엔진, 사람이 참조</dd>
-                <dt>CSS 클래스명:</dt>
-                <dd>개발자가 참조</dd>
+                <dt class="color-highlight">내용 시맨틱</dt>
+                <dd class="u-margin-bottom">검색엔진, 사람이 참조 <br>&rarr; HTML, Microdata</dd>
+                <dt class="color-highlight">개발 시맨틱</dt>
+                <dd>개발자가 참조 <br>&rarr; CSS 클래스명</dd>
             </dl>
+
+            <aside class="notes" data-markdown>
+                1. 내용의 시맨틱을 위해서는 마크업과 마이크로데이터를 신경써라. 검색엔진과 사람을 위한 것이다.
+                2. CSS는 개발자가 주 사용자다. 개발자를 위한 시맨틱을 신경써야 한다.
+            </aside>
+        </section>
+
+        <section>
+            <pre class="text-large"><code class="html">&lt;h2>뉴스&lt;/h2>
+                &lt;ul class="news">
+                    ...
+            </code></pre>
+            <pre class="text-large"><code class="html">&lt;h2>뉴스&lt;/h2>
+                &lt;ul class="simple-list">
+                    ...
+            </code></pre>
+
+            <aside class="notes" data-markdown>
+                1. `.news`: 뉴스에만 사용할 수 있고, 정보는 내용에서 도출된다.
+                2. `.simple-list`: 비슷한 형태라면 어디서나 재사용할 수 있고, 어떤 목적으로 사용하는 클래스인지 개발자에게 정보를 준다.
+            </aside>
         </section>
     </div>
 </div>
