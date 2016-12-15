@@ -88,12 +88,16 @@ rt {
 }
 
 .text-background {
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(255, 255, 255, 0.7);
 }
 
 // text color
 .color-black {
   color: black !important;
+}
+
+.color-gray {
+  color: $oc-gray-6
 }
 
 // margin, padding

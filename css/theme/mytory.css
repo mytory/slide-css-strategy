@@ -323,6 +323,9 @@ rt {
 .color-black {
   color: black !important; }
 
+.color-gray {
+  color: #868e96; }
+
 .u-padding {
   padding: 19px !important; }
 
