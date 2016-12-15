@@ -326,11 +326,14 @@ code {
 .text-background {
   background-color: rgba(255, 255, 255, 0.7); }
 
-.color-black {
-  color: black !important; }
-
-.color-gray {
+.color-muted {
   color: #868e96 !important; }
+
+.bg-positive {
+  background-color: #d8f5a2; }
+
+.bg-negative {
+  background-color: #ffc9c9; }
 
 .u-padding {
   padding: 19px !important; }

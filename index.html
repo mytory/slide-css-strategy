@@ -61,7 +61,7 @@
 #intro .main { ... }
 #intro .main h1 { ... }</code></pre>
 
-            <p class="color-gray">한 화면에 담으려고 한 줄로 썼습니다.</p>
+            <p class="color-muted">한 화면에 담으려고 한 줄로 썼습니다.</p>
 
             <aside class="notes" data-markdown>
                 이런 식의 예제를 심심찮게 볼 수 있다.
@@ -72,7 +72,7 @@
         <section>
             <h2>권장사항이 우리 목을 조르고 있다</h2>
 
-            <blockquote class="color-gray">
+            <blockquote class="color-muted">
                 <p>
                     Our CSS best practice are killing us.
                     <br>
@@ -158,6 +158,8 @@ html {
 }
 </code></pre>
 
+            <p>기본 스타일을 갖추고 출발할 수 있게 해 준다.</p>
+
         </section>
 
         <section>
@@ -175,7 +177,7 @@ html {
 }
             </code></pre>
 
-            <p>기본 스타일을 갖추고 출발할 수 있게 해 준다.</p>
+            <p>폭포(Cascade)처럼 흐르게 하고 필요한 놈만 저격하자.</p>
 
         </section>
 
@@ -199,9 +201,9 @@ html {
         <section>
             <dl class="text-large">
                 <dt class="color-highlight">내용 시맨틱</dt>
-                <dd class="u-margin-bottom">검색엔진, 사람이 참조<br><span class="color-gray">&rarr; HTML, Microdata</span></dd>
+                <dd class="u-margin-bottom">검색엔진, 사람이 참조<br><span class="color-muted">&rarr; HTML, Microdata</span></dd>
                 <dt class="color-highlight">개발 시맨틱</dt>
-                <dd>개발자가 참조<br><span class="color-gray">&rarr; CSS 클래스명</span></dd>
+                <dd>개발자가 참조<br><span class="color-muted">&rarr; CSS 클래스명</span></dd>
             </dl>
 
             <aside class="notes" data-markdown>
@@ -249,7 +251,7 @@ html {
 
         <section>
             <h2>
-                <small class="color-gray">원칙1.</small>
+                <small class="color-muted">원칙1.</small>
                 골격과 겉모양을 분리
             </h2>
 <pre class="text-medium"><code class="css">.blue-button {
@@ -267,7 +269,7 @@ html {
 
         <section>
             <h2>
-                <small class="color-gray">원칙1.</small>
+                <small class="color-muted">원칙1.</small>
                 골격과 겉모양을 분리
             </h2>
 <pre class="text-medium"><code class="css">.button {
@@ -286,7 +288,7 @@ html {
 
         <section>
             <h2>
-                <small class="color-gray">원칙2.</small>
+                <small class="color-muted">원칙2.</small>
                 컨테이너와 내용물을 분리
             </h2>
 
@@ -300,7 +302,7 @@ html {
 
         <section>
             <h2>
-                <small class="color-gray">원칙2.</small>
+                <small class="color-muted">원칙2.</small>
                 컨테이너와 내용물을 분리
             </h2>
 
@@ -368,6 +370,7 @@ html {
 
         <section>
             <h2>부트스트랩의 <code>.btn</code> 객체</h2>
+
             <p><img src="images/bootstrap-button-1.jpg" alt=""></p>
 <pre><code class="html"><button class="btn  btn-primary">
     수정
@@ -376,12 +379,262 @@ html {
 
         <section>
             <h2>부트스트랩의 <code>.btn</code> 객체</h2>
+
             <p><img src="images/bootstrap-button-2.jpg" alt=""></p>
 <pre><code class="html"><button class="btn  btn-lg  btn-primary">
     저장
 </button></code></pre>
 
         </section>
+
+        <section data-markdown>
+            # OOCSS의 도구
+
+            1. 특정도(Specificity) 평준화
+            2. 태그 선택자 사용 자제
+            3. 재사용성을 확보하는 이름
+            4. 타이포그라피 전략을 세우자
+
+            등
+        </section>
+
+
+        <section>
+            <h2>
+                <small class="color-muted">도구1.</small>
+                특정도
+                <small>(Specificity)</small>
+                평준화
+            </h2>
+
+            <table>
+                <thead>
+                <tr>
+                    <th></th>
+                    <th>id</th>
+                    <th>class</th>
+                    <th>tag</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr class="bg-negative">
+                    <th scope="row"><code>#sidebar h2</code></th>
+                    <td><b>1</b></td>
+                    <td>0</td>
+                    <td>1</td>
+                </tr>
+                <tr class="bg-negative">
+                    <th scope="row"><code>.box.bordered</code></th>
+                    <td>0</td>
+                    <td><b>2</b></td>
+                    <td>0</td>
+                </tr>
+                <tr class="bg-positive">
+                    <th scope="row"><code>.u-h2</code></th>
+                    <td>0</td>
+                    <td>1</td>
+                    <td>0</td>
+                </tr>
+                <tr class="bg-positive">
+                    <th scope="row"><code>.bordered</code></th>
+                    <td>0</td>
+                    <td>1</td>
+                    <td>0</td>
+                </tr>
+                </tbody>
+            </table>
+
+            <p class="color-muted  text-small">자세하게 알고 싶으면 MDN의
+                <a href="https://developer.mozilla.org/ko/docs/Web/CSS/Specificity" target="_blank" rel="noopener">명시도</a> 참고</p>
+
+        </section>
+
+
+        <section>
+            <h2>
+                <small class="color-muted">도구2.</small>
+                태그 선택자 사용 자제
+            </h2>
+
+            <pre><code class="css">ul.nav { ... }
+button.btn { ... }
+div.box { ... }</code></pre>
+            <pre><code class="html"><span class="nav"></span>
+<a class="btn" href="..."></a>
+<p class="box"></p></code></pre>
+
+        </section>
+
+
+
+        <section>
+            <h2>
+                <small class="color-muted">도구2.</small>
+                태그 선택자 사용 자제
+            </h2>
+
+<pre><code class="css">.title span {
+    color: #364fc7;
+    font-weight: bold;
+}</code></pre>
+<pre><code class="html"><header class="title">
+    박근혜는
+    <span>즉각</span>
+    퇴진하라
+</header></code></pre>
+
+            <p>베이스 잡을 때를 말하는 건 아니다.</p>
+
+        </section>
+
+
+
+
+        <section>
+
+            <h2>
+                <small class="color-muted">도구2.</small>
+                태그 선택자 사용 자제
+            </h2>
+
+<pre><code class="css">.color-primary {
+    color: #364fc7;
+}
+</code></pre>
+<pre><code class="html"><header class="title">
+    박근혜는
+    <b class="color-primary">즉각</b>
+    퇴진하라
+</header></code></pre>
+        </section>
+
+
+
+        <section>
+            <h2>
+                <small class="color-muted">도구1~2.</small>
+                특정도와 태그 선택자
+            </h2>
+
+<pre><code class="css">.btn { ... }
+.uilist { ... }
+.uilist a { ... }</code></pre>
+
+<div class="fragment">
+<pre><code class="html"><nav class="uilist">
+    <a href="#">소개</a>
+    <a class="btn" href="#">로그인</a>
+</nav></code></pre>
+
+            <ul>
+                <li>덮어쓰게 된다.</li>
+                <li>모든 <code>a</code>에 적용.</li>
+            </ul>
+</div>
+        </section>
+
+
+        <section>
+            <h2>
+                <small class="color-muted">도구1~2.</small>
+                특정도와 태그 선택자
+            </h2>
+
+<pre><code class="css">.btn { ... }
+.uilist { ... }
+.uilist-item { ... }</code></pre>
+
+<div class="fragment">
+<pre><code class="html"><nav class="uilist">
+    <a class="uilist-item" href="#">소개</a>
+    <span class="uilist-item">
+        <a class="btn" href="#">로그인</a>
+    </span>
+</nav></code></pre>
+    <p>코드는 좀 늘어도 일관성 유지.</p>
+</div>
+        </section>
+
+
+
+<section>
+    <h2>
+        <small class="color-muted">도구3.</small>
+        재사용성을 확보하는 이름
+    </h2>
+
+    <p>모양 기반 이름을 골라야 하는가?</p>
+
+<pre><code class="css">.big-blue-title { /* 색이 바뀌면? */ }
+.text-primary { /* 역할 기반 이름 */ }</code></pre>
+
+<pre><code class="css">.submit-button { /* 제출 안 하면? */ }
+.button-primary { /* 역할 기반 이름 */ }</code></pre>
+</section>
+
+
+        <section>
+            <h2>
+                <small class="color-muted">도구3.</small>
+                재사용성을 확보하는 이름
+            </h2>
+
+            <p>위치 기반 이름은?</p>
+
+<pre><code class="css">.bottom-items { /* 가운데 쓰면? */ }
+.card { /* 위치 독립적 성격 표현 */ }</code></pre>
+
+<pre><code class="css">.index-box { /* 다른 페이지에 가면? */ }
+.panel { /* 위치 독립적 성격 표현 */ }</code></pre>
+
+            <aside class="notes" data-markdown>
+                특정 모양이나 위치에 기반한 이름은 일단 피하자.
+
+                모양의 특성을 드러내면서도 종속적이지 않은 이름을 지어야 재사용성이 높아진다.
+
+                다른 개발자가 다른 용도로 사용할 때 사용할 수 있을 것인지를 생각하자.
+            </aside>
+
+        </section>
+
+
+<section>
+    <h2>
+        <small>도구4.</small>
+        레이아웃 전략을 세우자
+    </h2>
+
+    <p>그리드 모듈을 갖추고 있어야 한다.</p>
+<pre><code class="html"><div class="grid">
+  <div class="grid-item  u-3/12">left</div>
+  <div class="grid-item  u-6/12">center</div>
+  <div class="grid-item  u-3/12">right</div>
+</div>
+</code></pre>
+
+</section>
+
+
+<section>
+    <h2>
+        <small class="color-muted">도구5.</small>
+        타이포그라피 전략을 세우자
+    </h2>
+
+    <ul>
+        <li>기본 <strong>글꼴, 크기, 색</strong>을 태그 선택자에 지정</li>
+        <li>Hx <strong>글꼴, 크기, 색</strong>을 헤딩 선택자에 지정</li>
+        <li>사용할 <strong>글꼴, 크기, 색</strong> 유틸리티 클래스</li>
+    </ul>
+
+    <p>컴포넌트 폰트 지정을 피하면 중복 방지에 도움</p>
+</section>
+
+
+
+
+
+
 
     </div>
 </div>

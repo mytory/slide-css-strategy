@@ -100,12 +100,17 @@ code {
 }
 
 // text color
-.color-black {
-  color: black !important;
+.color-muted {
+  color: $oc-gray-6 !important;
 }
 
-.color-gray {
-  color: $oc-gray-6 !important;
+// background-color
+.bg-positive {
+  background-color: $oc-lime-2;
+}
+
+.bg-negative {
+  background-color: $oc-red-2;
 }
 
 // margin, padding
