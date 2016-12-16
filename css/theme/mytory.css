@@ -324,7 +324,7 @@ code {
   text-shadow: white 0 0 10px !important; }
 
 .text-box {
-  padding: 19px !important;
+  padding: 38px !important;
   background-color: rgba(255, 255, 255, 0.7); }
 
 .text-box--less-transparent {
@@ -354,3 +354,5 @@ code {
 .reveal pre {
   font-size: 38px;
   font-family: d2coding, nanumgothiccoding, monospace; }
+  .reveal pre code {
+    padding: 19px; }

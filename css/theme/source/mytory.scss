@@ -96,7 +96,7 @@ code {
 }
 
 .text-box {
-  padding: $mainFontSize / 2 !important;
+  padding: $mainFontSize !important;
   background-color: rgba(255, 255, 255, 0.7);
 }
 
@@ -139,5 +139,7 @@ code {
 .reveal pre {
   font-size: $mainFontSize;
   font-family: d2coding, nanumgothiccoding, monospace;
+  code {
+    padding: $mainFontSize /2;
+  }
 }
-

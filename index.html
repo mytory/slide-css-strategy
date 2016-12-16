@@ -98,7 +98,7 @@
             </aside>
         </section>
 
-        <section data-background="images/sniper.jpg">
+        <section id="sniper" data-background="images/sniper.jpg">
             <h2 class="text-outline  u-margin-bottom-xlarge">저격형 선택자</h2>
 
             <pre class="text-medium"><code class="css">.issue h2 { ... }
@@ -161,23 +161,43 @@ html {
 
             <p>기본 스타일을 갖추고 출발할 수 있게 해 준다.</p>
 
+
+            <aside class="notes" data-markdown>
+                캐스캐이드는 한 요소에 같은 규칙이 적용됐을 때 어떤 규칙을 우선해서
+                적용할 것인지 가려 주는 놈이다.
+
+                이 말은, 상속 받은 규칙과 해당 요소에 바로 적용된 규칙 사이에서도 작용.
+                만약 상속 받은 규칙이라는 것이 존재하지 않는다면 캐스캐이드의 역할은
+                매우 줄어들 것이다.
+
+                오히려 엄청나게 세부적으로 스타일을 지정해야 하는 문제가 벌어진다.
+
+                그런데 저격형 선택자는 마치 상속이 없는 것처럼 사용하는 선택자다.
+                캐스캐이드는 지나치게 활용한 결과 캐스캐이드가 없는 것처럼 행동하게 된 것이다.
+                캐스캐이드를 잘 활용하려면 기본 스타일을 잘 지정한다는 것을 의미한다.
+            </aside>
+
+
         </section>
 
         <section>
             <h2>
-                <ruby>C
-                    <rt>Cascade</rt>
-                </ruby>
-                는 잘못이 없다
+                <ruby>폭포<rt>Cascade</rt></ruby>처럼 흐르게 하고<br>필요한 놈만 저격하자
             </h2>
 
             <pre><code class="css">input, textarea {
   font-family: inherit;
   line-height: inherit;
   color: inherit;
-}            </code></pre>
+}</code></pre>
 
-            <p>폭포(Cascade)처럼 흐르게 하고 필요한 놈만 저격하자.</p>
+            <aside class="notes" data-markdown>
+                `input`, `textarea`는 위 세 요소를 상속받지 않는다. 그래서 상속을 받도록 지정해 줬다.
+                이렇게 지정한 이후부터는 다시 `input`, `textarea`에 대해서 신경쓸 필요가 없어지는 것이다.
+
+                캐스캐이드의 기본 뜻은 폭포다. 속성 정의가 폭포처럼 흐르게 하면서 세부적인 물길만 조정해
+                주는 것이 기본적으로 익혀야 할 기법이다.
+            </aside>
 
         </section>
 
@@ -229,7 +249,7 @@ html {
         <section data-background-image="images/kind-of-lego-block.jpg">
             <div class="text-box">
                 <h1>
-                    OOCSS
+                    <ruby>OOCSS <rt>Object Oriented CSS</rt></ruby>
                 </h1>
 
                 <p class="text-right">
@@ -247,16 +267,21 @@ html {
                     </li>
                 </ul>
             </div>
+
+            <aside class="notes" data-markdown>
+                객체 지향 CSS
+
+                객체라는 것은
+            </aside>
+
         </section>
 
 
 
 
         <section>
-            <h2>
-                <small class="color-muted">원칙1.</small>
-                골격과 겉모양을 분리
-            </h2>
+            <p class="color-muted">원칙1. 골격과 겉모양을 분리</p>
+
 <pre class="text-medium"><code class="css">.blue-button {
     line-height: 20px;
     background-color: blue;
@@ -271,7 +296,7 @@ html {
         </section>
 
 
-        
+
         <section data-background-image="images/separate-structure-and-skin.jpg">
         </section>
 
@@ -279,10 +304,7 @@ html {
 
 
         <section>
-            <h2>
-                <small class="color-muted">원칙1.</small>
-                골격과 겉모양을 분리
-            </h2>
+            <p class="color-muted">원칙1. 골격과 겉모양을 분리</p>
 <pre class="text-medium"><code class="css">.button {
     line-height: 20px;
     ...
@@ -298,10 +320,7 @@ html {
         </section>
 
         <section>
-            <h2>
-                <small class="color-muted">원칙2.</small>
-                컨테이너와 내용물을 분리
-            </h2>
+            <p class="color-muted">원칙2. 컨테이너와 내용물을 분리</p>
 
 <pre class="css"><code>#article h2 { font-size: 24px; }
 #article h3 { font-size: 20px; }
@@ -312,10 +331,7 @@ html {
         </section>
 
         <section>
-            <h2>
-                <small class="color-muted">원칙2.</small>
-                컨테이너와 내용물을 분리
-            </h2>
+            <p class="color-muted">원칙2. 컨테이너와 내용물을 분리</p>
 
 <pre class="css"><code>.u-h2 { font-size: 24px; }
 .u-h3 { font-size: 20px; }
@@ -408,12 +424,10 @@ html {
 
 
         <section>
-            <h2>
-                <small class="color-muted">도구1.</small>
-                특정도
-                <small>(Specificity)</small>
-                평준화
-            </h2>
+            <p class="color-muted">
+                도구1.
+                <ruby>특정도<rt>Specificity</rt></ruby> 평준화
+            </p>
 
             <table>
                 <thead>
@@ -455,12 +469,25 @@ html {
             <p class="color-muted  text-small">자세하게 알고 싶으면 MDN의
                 <a href="https://developer.mozilla.org/ko/docs/Web/CSS/Specificity" target="_blank" rel="noopener">명시도</a> 참고</p>
 
+            <aside class="notes" data-markdown>
+                특정도는 캐스캐이드가 적용할 규칙의 우선순위를 가릴 때 사용하는 점수를 뜻한다.
+                id가 class와 태그를 이긴다. 그런데 id나 연이은 클래스를 사용하게 되면 문제 생긴다.
+                `#sidebar h2`로 지정한 것때문에 `h2`에는 다른 클래스의 규칙이 먹지 않는다.
+
+                1. 앞서 적용한 규칙이 뒤에서 적용한 규칙을 덮어쓴다. 특정도 전쟁이 벌어진다.
+                2. 방금 적용한 규칙이 어떤 규칙 때문에 적용이 안 되는지 일일이 찾아서 바꿔야
+                   하므로 유지보수에 시간이 많이 든다.
+                3. 규칙을 덮어쓰기 위해 더 높은 특정도를 만들어야 하므로 불필요한 선택자가 많아지고,
+                   이것은 또다시 특정도 전쟁을 유발한다.
+
+                따라서, `ID`를 선택자로 사용하진 말자. 책갈피와 js 훅에 사용하자.
+            </aside>
+
         </section>
 
 
         <section>
-            <p class="color-muted">도구2. 태그 선택자 사용 자제</p>
-
+            <p class="color-muted">도구2. 클래스와 태그 선택자를 결합하지 말자</p>
             <h2><code><span class="fragment fade-out">ul</span>.nav</code></h2>
             <h2><code><span class="fragment fade-out">div</span>.box</code></h2>
 
@@ -469,20 +496,14 @@ html {
 
 
         <section>
-            <p class="color-muted">도구2. 태그 선택자 사용 자제</p>
+            <p class="color-muted">도구2. 넓은 범위에 자손 태그 선택자를 사용하지 말자</p>
             <h2><code>.title span</code></h2>
 
-<!--<pre><code class="css">.title span {-->
-    <!--color: #364fc7;-->
-    <!--font-weight: bold;-->
-<!--}</code></pre>-->
 <pre><code class="html"><header class="title">
     박근혜는
     <span>즉각</span>
     퇴진하라
 </header></code></pre>
-
-            <p>베이스 잡을 때를 말하는 건 아니다.</p>
 
         </section>
 
@@ -490,13 +511,9 @@ html {
 
 
         <section>
-            <p class="color-muted">도구2. 태그 선택자 사용 자제</p>
+            <p class="color-muted">도구2. 넓은 범위에 자손 태그 선택자를 사용하지 말자</p>
             <h2><code>.color-primary</code></h2>
 
-<!--<pre><code class="css">.color-primary {-->
-    <!--color: #364fc7;-->
-<!--}-->
-<!--</code></pre>-->
 <pre><code class="html"><header class="title">
     박근혜는
     <b class="color-primary">즉각</b>
@@ -684,6 +701,8 @@ html {
 </section>
 
 
+
+
 <section data-markdown>
     # 목적을 되새기자
 
@@ -704,7 +723,7 @@ html {
 
         <section data-background-image="images/small-legos.jpg">
 
-            <span class="text-box">오용2</span>
+            <h3 class="text-box" style="display: inline-block;">오용2</h3>
 
             <div class="text-box  text-box--less-transparent  fragment">
                 <p><code>.mt10 .mt20 .mt30 .mt40 .mt50 .mt60 .mr10 .mr20 .mr30 .mr40 .mr50 .mr60 .f10 .f11 .f12 .f13 .f14 .f15 .f16 .f17 .f18 .f19 .f20 .ffnanum</code></p>
