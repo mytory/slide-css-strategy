@@ -586,7 +586,11 @@ html {
 
 
 
-<section data-background-image="images/typo-page.jpg"></section>
+<section data-background-image="images/typo-page.jpg">
+    <aside class="notes" data-markdown>
+        제작중인 사이트다. 다양한 글자 크기, 모양, 색이 있다.
+    </aside>
+</section>
         
         
         
@@ -714,19 +718,20 @@ html {
         <section>
             <h2><ruby>전처리기 <rt>Preprocessor</rt></ruby>의 이점</h2>
 
-            <ul>
-                <li>파일을 나눌 수 있다.
-                    <ul>
-                        <li>코드 연관성 &uarr;</li>
-                        <li>중복 제거 용이</li>
-                        <li>필요 없는 코드 제거 용이</li>
-                    </ul>
-                </li>
-                <li>파일을 합칠 수 있다.</li>
-                <li>에디터용 스타일시트 일관된 관리</li>
-                <li>변수, 함수, 확장 사용 가능</li>
-                <li>프로젝트간 재사용 부분적으로 가능</li>
-            </ul>
+            <img src="images/preprocessor-split-file.png" alt="파일을 나눌 수 있다">
+            <img src="images/preprocessor-subset.png" alt="일부만 빼서 새 CSS 만들 수 있다 - 원 소스 멀티 유즈">
+
+            <p>+ minify, 변수, 함수, 확장, 재사용성</p>
+
+            <aside class="notes" data-markdown>
+                (이미지를 보고 할 말)
+
+                - 파일을 나누면 장점
+                    - 코드 연관성 증가
+                    - 중복 제거 용이
+                    - 필요없는 코드 제거 용이
+                - 파일을 합칠 수 있다
+            </aside>
         </section>
 
 
