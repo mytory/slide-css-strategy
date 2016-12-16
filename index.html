@@ -660,15 +660,80 @@ html {
 </section>
 
 
+
+
+<section>
+    <h1>사례</h1>
+</section>
+
+<section data-background-image="images/line-object.jpg">
+<div class="text-box  fragment">
+<pre><code class="sass">.separator {
+  border: none;
+  border-bottom-width: 1px;
+}
+.separator--color-default
+.separator--color-secondary</code></pre>
+</div>
+
+</section>
+
+
+
+
+<section>
+    <p>높이 고정 없이 균일 높이</p>
+    <img src="images/flex-grid-1.jpg" alt="하단 관련기사">
+</section>
+
+
+
+
+
+<section data-background-image="images/flex-grid-sketch.jpg"></section>
+
+
+
+
+
+<section>
+    <p>제목 부분 처리</p>
+
+<pre><code class="html"><h2 class="u-color-secondary">
+    이슈 :
+    <a class="u-color-inherit">
+        노동자 운동
+    </a>
+</h2></code></pre>
+</section>
+
+
         <section>
-            <h1>사례</h1>
-            <p>미완노트</p>
-            <p>응용사례 이미지</p>
-            <p>골격과 겉모양 표시</p>
-            <p>타이포와 너비는 유틸리티로 하고 두 객체를 결합한 거</p>
+            <p><code>.flex-grid</code> + <code>.title</code> + utilities</p>
+<pre><code class="html" data-noescape>&lt;div class="<mark>flex-grid</mark>">
+&lt;a class="<mark>flex-grid-item</mark>  u-3/12">
+  &lt;img/>
+  &lt;header class="<mark class="bg-positive">title</mark>  <mark class="bg-positive">title-one-line</mark>">
+    &lt;p class="u-h3  u-color-sub">...&lt;/p>
+    &lt;h1 class="u-h3">...&lt;/h1>
+  &lt;/header>
+&lt;/a>
+&lt;/div>
+...</code></pre>
+
+            <p class="color-muted  text-small">배경색 담당 div를 뺐기 때문에 작동하는 코드는 아닙니다.</p>
         </section>
 
 
+
+        <section>
+            <p>재사용</p>
+            <img src="images/flex-grid-2.jpg" alt="지난 호 목록">
+        </section>
+
+
+
+        
 <section>
     <h1>목적은 생산성</h1>
     <p>예외</p>
@@ -696,7 +761,7 @@ html {
 
 <section>
     <p class="color-muted">예외라기보단...</p>
-    <h2>모든 것을 객체로<br>재사용해야 하는가?</h2>
+    <h2>모든 것을 모듈화해<br>재사용해야 하는가?</h2>
     <p>헤터, 푸터, 콘텐츠 영역, 로고...</p>
 </section>
 
@@ -805,6 +870,8 @@ html {
                 <li><code>http://mytory.net</code></li>
                 <li><code>mail@mytory.net</code></li>
             </ul>
+
+            <p class="color-muted">이 프리젠테이션은<br>제 블로그에서 다시 보실 수 있습니다.</p>
         </section>
 
     </div>
