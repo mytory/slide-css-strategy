@@ -100,6 +100,10 @@ code {
   background-color: rgba(255, 255, 255, 0.7);
 }
 
+.text-box--less-transparent {
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
 // text color
 .color-muted {
   color: $oc-gray-6 !important;

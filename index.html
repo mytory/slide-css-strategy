@@ -566,32 +566,41 @@ html {
 
 <section>
     <p class="color-muted">도구4. 기본 모듈을 갖추자</p>
+
     <h2>그리드, 헤딩, 링크, 목록, 버튼, <br>미디어, 테이블, 타이포...</h2>
-
-<pre><code class="html"><div class="layout">
-    <div class="layout-item  u-1/1"></div>
-    <div class="layout-item  u-1/2"></div>
-    <div class="layout-item  u-1/2"></div>
-</div></code></pre>
-
-    <p class="text-right color-muted text-small">inuitcss에서 원용했습니다.</p>
 
 </section>
 
 
 <section>
-    <h2>
-        <small class="color-muted">도구5.</small>
-        타이포그라피 전략을 세우자
-    </h2>
+    <p class="color-muted">도구5. 타이포그라피 전략을 세우자</p>
+
     <ul>
         <li>기본 <strong>글꼴, 크기, 색</strong>을 태그 선택자에 지정</li>
         <li>Hx <strong>글꼴, 크기, 색</strong>을 헤딩 선택자에 지정</li>
         <li>사용할 <strong>글꼴, 크기, 색</strong> 유틸리티 클래스</li>
     </ul>
 
-    <p>컴포넌트에서의 폰트 지정을 최소화하자.</p>
+    <p>객체에서의 폰트 지정은 최소화</p>
 </section>
+
+
+
+<section data-background-image="images/typo-page.jpg"></section>
+        
+        
+        
+<section data-background-image="images/typo-page.jpg">
+    <p class="color-muted  text-box">도구5. 타이포그라피 전략을 세우자</p>
+    <img src="images/typo.jpg" alt="글자 크기 파편화가 너무 심하다">
+
+    <aside class="notes" data-markdown>
+        1. 가장 작은 사이즈는 통일하는 쪽으로
+        2. 작은 사이즈도 통일하는 쪽으로
+        3. 디자이너와 토론해야 한다. 물론 안 되면 어쩔 수 없다.
+    </aside>
+</section>
+
 
 
 <section>
@@ -604,6 +613,7 @@ html {
 .u-text-center
 
 /* font size */
+.u-text-tiny
 .u-text-small
 .u-text-large
 
@@ -612,6 +622,9 @@ html {
 .u-color-secondary
 .u-color-muted
 .u-color-highlight
+
+/* remove underline */
+.u-text-no-deco
 </code></pre>
 </section>
 
@@ -626,65 +639,75 @@ html {
 
 
 <section>
-    <h1>예외·오용</h1>
+    <h1>목적은 생산성</h1>
+    <p>예외</p>
 </section>
 
 
 
 <section data-background-image="images/ckeditor.jpg">
     <div class="text-box">
-        <p class="color-muted">예외1</p>
+        <p class="color-muted">예외</p>
         <h2>에디터가 생산한 코드 <br> <code>.content h2</code></h2>
     </div>
 </section>
 
 
 
-<section>
-    <p class="color-muted">예외2</p>
-    <h2>선택자에 개입하지 <br>못하는 라이브러리</h2>
+<section data-background-image="images/bxslider.jpg">
+    <div class="text-box">
+        <p class="color-muted">예외</p>
+        <h2>선택자에 개입하지<br>못하는 라이브러리</h2>
+    </div>
 </section>
 
 
 
 <section>
     <p class="color-muted">예외라기보단...</p>
-    <h2>모든 것을 객체로 만들어 <br>재사용해야 하는가?</h2>
+    <h2>모든 것을 객체로<br>재사용해야 하는가?</h2>
     <p>헤터, 푸터, 콘텐츠 영역, 로고...</p>
 </section>
 
 
+<section data-markdown>
+    # 목적을 되새기자
+
+    오용 방지
+</section>
+
 
 <section>
     <p class="color-muted">오용1. Sniping Type에서 Snake Type으로...</p>
-    <h2>CSS에 문서 구조를 담지 말자</h2>
+    <h3 class="u-margin-bottom">CSS에 문서 구조를 담는 것은<br>목적이 아니다</h3>
 
-    <pre><code>#article-footer .issue ul li a.more</code></pre>
+    <pre><code class="css">#article-footer .issue ul li a.more</code></pre>
     <p>&darr;</p>
-    <pre><code>.article-footer_issue_ul_li_a_more</code></pre>
+    <pre><code class="css">.article-footer_issue_ul_li_a_more</code></pre>
 </section>
 
 
 
-        <section>
+        <section data-background-image="images/small-legos.jpg">
 
-            <div class="text-box">
-                <p class="color-muted">오용2</p>
-                <h2><code>.mt10 .mt20 .mt30 .mt40 .mt50 .mt60 .mt70 .mt80 .fz10 .fz11 .fz12 .fz13 .fz14 .fz15 .fz16 .fz17 .fz18 .fz19 .fz20 .ffnanum</code></h2>
+            <span class="text-box">오용2</span>
+
+            <div class="text-box  text-box--less-transparent  fragment">
+                <p><code>.mt10 .mt20 .mt30 .mt40 .mt50 .mt60 .mr10 .mr20 .mr30 .mr40 .mr50 .mr60 .f10 .f11 .f12 .f13 .f14 .f15 .f16 .f17 .f18 .f19 .f20 .ffnanum</code></p>
             </div>
 
         </section>
 
 
-        <section data-background-image="images/small-legos.jpg"></section>
 
 
             <section data-markdown>
-            ## 생산성을 좀더 높여 보기
+            # 더 배우기
 
-            - CSS 프레임워크를 사용해 보자
-            - 작명 기법을 사용해 보자 BEM
-            - 전처리기를 사용하자 Sass, Less...
+            - Sass, Less 같은 **전처리기**
+            - BEM 같은 **작명 기법**
+            - CSS **프레임워크**
+            - 영어
         </section>
 
 
@@ -707,20 +730,30 @@ html {
         </section>
 
 
-        <section data-markdown>
-            ## 원칙과 사람
 
-            **원칙**에 기반해 **사람**과 토론한다
-        </section>
 
 
         <section data-markdown>
-            ## CSS 방법론 참고
+            ## CSS 방법론
 
             - [CSS Wizardry](http://csswizardry.com)
             - [Stubbornella](http://www.stubbornella.org/)
+            - [SMACSS](https://smacss.com/)([번역서](http://www.aladin.co.kr/shop/wproduct.aspx?ItemId=75606071))
             - [Smashing Magazine](https://www.smashingmagazine.com/tag/css/)
         </section>
+
+
+
+
+        <section>
+            <h1 style="font-weight: normal;">
+                <strong>원칙</strong>에 기반해
+                <br>
+                <strong>사람</strong>과 토론한다
+            </h1>
+        </section>
+
+
 
 
         <section>
