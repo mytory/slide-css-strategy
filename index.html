@@ -296,13 +296,13 @@ html {
         <section>
             <p class="color-muted">원칙1. 골격과 겉모양을 분리</p>
 
-<pre class="text-medium"><code class="css">.blue-button {
+<pre class="text-medium"><code class="css">.primary-button {
     line-height: 20px;
     background-color: blue;
     ...
 }</code></pre>
 
-<pre class="text-medium"><code class="css">.red-button {
+<pre class="text-medium"><code class="css">.danger-button {
     line-height: 20px;
     background-color: red;
     ...
@@ -334,10 +334,10 @@ html {
     ...
 }
 </code></pre>
-<pre class="text-medium"><code class="css">.button-blue {
+<pre class="text-medium"><code class="css">.button-primary {
     background-color: blue;
 }
-.button-red {
+.button-danger {
     background-color: red;
 }
 </code></pre>
@@ -373,7 +373,13 @@ html {
 .u-h5 { font-size: 14px; }
 </code></pre>
 
-            <pre><code class="html"><h2 class="u-h3">...</h2></code></pre>
+<pre><code class="html"><article class="content">
+    <h2 class="u-h3">...</h2>
+</article>
+
+<footer class="site-footer">
+    <h1 class="u-h3">...</h1>
+</footer></code></pre>
 
             <aside class="notes" data-markdown>
                 2011년 페이스북은 이런 식으로 heading 정의를 958개에서 25개로 줄임.
@@ -656,7 +662,7 @@ html {
         <section>
             <p class="color-muted">도구3. 재사용성을 확보하는 이름</p>
             <h2><code class="bg-negative">.bottom-items</code></h2>
-            <h2><code class="bg-positive">.card</code></h2>
+            <h2><code class="bg-positive">.cards</code></h2>
 
             <aside class="notes" data-markdown>
                 - 특정 모양이나 위치에 기반한 이름은 일단 피하자.
@@ -703,9 +709,9 @@ html {
         제작중인 사이트다. 다양한 글자 크기, 모양, 색이 있다.
     </aside>
 </section>
-        
-        
-        
+
+
+
 <section data-background-image="images/typo-page.jpg">
     <p class="color-muted  text-box">도구5. 타이포그라피 전략을 세우자</p>
     <img src="images/typo.jpg" alt="글자 크기 파편화가 너무 심하다">
@@ -831,7 +837,7 @@ html {
 
 
 
-        
+
 <section>
     <h1>목적은 생산성</h1>
     <p>예외</p>
