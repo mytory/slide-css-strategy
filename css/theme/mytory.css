@@ -353,6 +353,8 @@ code {
 
 .reveal pre {
   font-size: 38px;
-  font-family: d2coding, nanumgothiccoding, monospace; }
+  font-family: d2coding, nanumgothiccoding, monospace;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch; }
   .reveal pre code {
     padding: 19px; }

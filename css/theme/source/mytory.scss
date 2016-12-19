@@ -139,6 +139,8 @@ code {
 .reveal pre {
   font-size: $mainFontSize;
   font-family: d2coding, nanumgothiccoding, monospace;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
   code {
     padding: $mainFontSize /2;
   }
